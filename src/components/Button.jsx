@@ -1,9 +1,8 @@
 import styles from './Button.module.css'
 
-export default function Button({childen,onClick,type}) {
+export default function Button({onClick,type,children}) {
   return (
     <button className={`${styles.btn} ${styles[type]}`} onClick={onClick}>
-{childen}
-    </button>
+     {children} </button>
   )
 }
