@@ -8,7 +8,7 @@ export default function CountryList() {
   const { cities, isLoading } = useCities()
   if (isLoading) return <Spinner />
 
-  if (!cities.length) return <Message message="Add your city by clicking on the map." />
+  if (!cities.length) return <Message messages="Add your city by clicking on the map." />
 
   const countries = cities.reduce((arr, city) => {
     if (!arr.map(el => el.city).includes(city.country)) {
